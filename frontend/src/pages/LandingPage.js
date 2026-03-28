@@ -61,15 +61,7 @@ export default function LandingPage() {
           <div className="landing-nav-links">
             <button className="landing-nav-link" onClick={() => navigate('/dashboard')}>Dashboard</button>
             <button className="landing-nav-link" onClick={() => navigate('/history')}>History</button>
-            <button className="btn btn-primary btn-sm" onClick={() => {
-              alert(
-                "Install Phishara Extension:\n\n" +
-                "1. Go to chrome://extensions in Chrome\n" +
-                "2. Enable Developer mode (top right)\n" +
-                "3. Click 'Load unpacked'\n" +
-                "4. Select the phishara/extension folder"
-              );
-            }}>
+            <button className="btn btn-primary btn-sm" onClick={() => alert('To be available soon')}>
               Download Extension
             </button>
           </div>
@@ -138,17 +130,7 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
-              <button className="btn btn-primary" onClick={() => {
-                // Guide user through loading the unpacked extension
-                alert(
-                  "To install the Phishara extension:\n\n" +
-                  "1. Open Chrome and go to: chrome://extensions\n" +
-                  "2. Turn on 'Developer mode' (top right toggle)\n" +
-                  "3. Click 'Load unpacked'\n" +
-                  "4. Select the 'phishara/extension' folder\n\n" +
-                  "The Phishara shield icon will appear in your toolbar."
-                );
-              }}>
+              <button className="btn btn-primary" onClick={() => alert('To be available soon')}>
                 Install extension
               </button>
             </div>

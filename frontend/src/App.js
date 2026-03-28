@@ -47,15 +47,7 @@ function AppNav({ devMode, setDevMode }) {
 
       <div className="topnav-right">
         <Toggle on={devMode} onChange={setDevMode} label="Developer" />
-        <button className="btn btn-primary btn-sm" onClick={() => {
-          alert(
-            "Install Phishara Extension:\n\n" +
-            "1. Go to chrome://extensions in Chrome\n" +
-            "2. Enable Developer mode (top right)\n" +
-            "3. Click 'Load unpacked'\n" +
-            "4. Select the phishara/extension folder"
-          );
-        }}>
+        <button className="btn btn-primary btn-sm" onClick={() => alert('To be available soon')}>
           Download Extension
         </button>
       </div>
