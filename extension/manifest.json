@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Phishara — Phishing Protection",
+  "version": "1.0.0",
+  "description": "Real-time phishing detection for every page you visit.",
+  "permissions": ["activeTab", "storage", "scripting", "webNavigation"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,101 @@
+.scan-page { max-width: 760px; }
+
+.scan-card { padding: 32px; }
+
+.type-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 22px;
+}
+
+.type-tab {
+  padding: 6px 14px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.type-tab:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+.type-tab.active {
+  background: var(--purple-dim);
+  border-color: rgba(138,92,246,0.3);
+  color: var(--purple-light);
+}
+
+.scan-form { margin-bottom: 16px; }
+
+.scan-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.scan-btn {
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.scan-examples {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.examples-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.example-chip {
+  padding: 4px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.example-chip:hover {
+  border-color: rgba(138,92,246,0.3);
+  color: var(--purple-light);
+  background: var(--purple-dim);
+}
+
+.scan-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--high-dim);
+  border: 1px solid rgba(248,113,113,0.2);
+  border-radius: var(--radius-sm);
+  color: var(--high);
+  font-size: 13.5px;
+}
+
+.api-notice {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(251,191,36,0.08);
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--medium);
+  line-height: 1.6;
+}
+.api-notice code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: rgba(251,191,36,0.12);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.api-notice a { color: var(--medium); text-decoration: underline; margin: 0 4px; }

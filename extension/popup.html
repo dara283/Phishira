@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishara</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 340px; min-height: 200px;
+      background: #0f0f23; color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+    }
+    .header {
+      background: #1a1a2e; padding: 14px 16px;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .logo { font-size: 20px; }
+    .title { font-size: 16px; font-weight: 700; color: #00d4ff; }
+    .content { padding: 16px; }
+    .status-card {
+      background: #16213e; border-radius: 10px;
+      padding: 16px; margin-bottom: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .score-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .score-num { font-size: 32px; font-weight: 700; }
+    .badge {
+      padding: 4px 10px; border-radius: 20px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+    }
+    .safe { color: #10b981; background: rgba(16,185,129,0.15); }
+    .low { color: #84cc16; background: rgba(132,204,22,0.15); }
+    .medium { color: #f59e0b; background: rgba(245,158,11,0.15); }
+    .high { color: #ef4444; background: rgba(239,68,68,0.15); }
+    .critical { color: #dc2626; background: rgba(220,38,38,0.2); }
+    .unknown { color: #64748b; background: rgba(100,116,139,0.15); }
+    .bar-wrap { background: rgba(255,255,255,0.08); border-radius: 4px; height: 6px; overflow: hidden; }
+    .bar { height: 100%; border-radius: 4px; transition: width 0.5s; }
+    .findings { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+    .finding {
+      padding: 7px 10px; background: rgba(255,255,255,0.04);
+      border-radius: 6px; font-size: 11px; color: #94a3b8;
+      border-left: 2px solid #ef4444;
+    }
+    .url-text {
+      font-size: 10px; color: #64748b; word-break: break-all;
+      margin-bottom: 10px; font-family: monospace;
+    }
+    .scanning { text-align: center; padding: 24px; color: #64748b; }
+    .spinner {
+      width: 24px; height: 24px; border: 2px solid rgba(255,255,255,0.1);
+      border-top-color: #00d4ff; border-radius: 50%;
+      animation: spin 0.7s linear infinite; margin: 0 auto 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .open-btn {
+      width: 100%; padding: 9px; background: rgba(0,212,255,0.1);
+      border: 1px solid rgba(0,212,255,0.3); color: #00d4ff;
+      border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 500;
+    }
+    .open-btn:hover { background: rgba(0,212,255,0.2); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="logo">🛡</span>
+    <span class="title">Phishara</span>
+  </div>
+  <div class="content" id="content">
+    <div class="scanning">
+      <div class="spinner"></div>
+      Scanning current page...
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
