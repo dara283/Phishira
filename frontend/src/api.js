@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = process.env.REACT_APP_API_URL || 'https://phishara-api.onrender.com';
+const BASE = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 const api = axios.create({ baseURL: BASE });
 
